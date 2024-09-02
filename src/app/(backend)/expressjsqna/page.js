@@ -3,7 +3,7 @@ import useQnA from "@/hooks/useQna";
 import Image from "next/image";
 import React, { useState } from "react";
 
-const CSS3 = () => {
+const EXPRESS = () => {
   const { allQnA, loading } = useQnA();
   const [expandedQuestionId, setExpandedQuestionId] = useState(null);
 
@@ -30,7 +30,7 @@ const CSS3 = () => {
         </p>
       ) : (
         allQnA
-          ?.filter((filteredQna) => filteredQna.qtype === "CSS3")
+          ?.filter((filteredQna) => filteredQna.qtype === "EXPRESSJS")
           .map((qna, index) => (
             <div key={qna._id} className="">
               <div
@@ -51,4 +51,4 @@ const CSS3 = () => {
   );
 };
 
-export default CSS3;
+export default EXPRESS;

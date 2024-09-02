@@ -12,7 +12,7 @@ export const GET=async()=>{
     const qnaCollection=db.collection('qna')
     try {
        const allQna=await qnaCollection.find().toArray()
-       console.log(allQna)
+       
        return NextResponse.json(allQna)
     } catch (error) {
         return NextResponse.json({message:"something went wrong",error})

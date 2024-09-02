@@ -12,7 +12,8 @@ const AdminPage = () => {
     const qtype = form.category.value;
     const question = form.question.value;
     const answer = form.answer.value;
-    const data = { qtype, question, answer };
+    const code = form.code.value;
+    const data = { qtype, question, answer,code };
 
 
     try {
@@ -40,7 +41,7 @@ const AdminPage = () => {
   }
 
   return (
-    <div className="h-screen flex">
+    <div className=" flex">
       {/* Sidebar */}
       <div className="bg-green-300 w-[15%] h-screen flex flex-col gap-3 pt-3">
         <button className="btn bg-[#ff7777] text-white py-2 px-4 rounded">Add QnA</button>
@@ -69,6 +70,11 @@ const AdminPage = () => {
                 <option value="REDUX">Redux</option>
                 <option value="NEXTJS">Next.js</option>
                 <option value="NODEJS">Node.js</option>
+                <option value="EXPRESSJS">Express.js</option>
+                <option value="MONGODB">MongoDB</option>
+                <option value="MONGOOSE">Mongoose</option>
+                <option value="JWT">JWT</option>
+                <option value="FIREBASE">Firebase</option>
               </select>
             </div>
 
@@ -92,11 +98,20 @@ const AdminPage = () => {
                 id="answer"
                 name="answer"
                 required
-                className="w-full border p-2 mt-1 rounded h-60"
+                className="w-full border p-2 mt-1 rounded h-32"
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="answer" className="block text-sm font-medium text-gray-700">Code</label>
+              <textarea
+                type="text"
+                id="code"
+                name="code"
+                
+                className="w-full border p-2 mt-1 rounded h-20"
               />
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               className="btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition"

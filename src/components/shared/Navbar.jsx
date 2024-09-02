@@ -17,7 +17,7 @@ const Navbar = () => {
                         <li className='px-4 py-2 border-b border-gray-200 hover:text-[#FF7777]'><Link href="/javascriptqna">JAVASCRIPT</Link></li>
                         <li className='px-4 py-2 border-b border-gray-200 hover:text-[#FF7777]'><Link href="/reactqna">REACT</Link></li>
                         <li className='px-4 py-2 border-b border-gray-200 hover:text-[#FF7777]'><Link href="/nextjsqna">NEXTJS</Link></li>
-                        <li className='px-4 py-2 hover:text-[#FF7777]'><Link href="/">REDUX</Link></li>
+                        <li className='px-4 py-2 hover:text-[#FF7777]'><Link href="/reduxqna">REDUX</Link></li>
                     </ul>
                 </li>
                 <li className='relative group'>
