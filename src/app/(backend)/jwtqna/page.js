@@ -3,7 +3,7 @@ import useQnA from "@/hooks/useQna";
 
 import React, { useState } from "react";
 import { TbHandClick } from "react-icons/tb";
-
+export const dynamic = "force-dynamic";
 const JWT = () => {
   const { allQnA, loading } = useQnA();
   const [expandedQuestionId, setExpandedQuestionId] = useState(null);

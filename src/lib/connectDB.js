@@ -2,6 +2,7 @@
 
 import { MongoClient, ServerApiVersion } from "mongodb";
 let db;
+export const dynamic = "force-dynamic";
 export const connectDB = async () => {
   if(db) return db;
   try {

@@ -2,7 +2,7 @@
 import useQnA from "@/hooks/useQna";
 import { TbHandClick } from "react-icons/tb";
 import React, { useState } from "react";
-
+export const dynamic = "force-dynamic";
 const REACT = () => {
   const { allQnA, loading } = useQnA();
   const [expandedQuestionId, setExpandedQuestionId] = useState(null);

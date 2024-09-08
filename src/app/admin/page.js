@@ -2,7 +2,7 @@
 
 import React from "react";
 import toast, { Toaster } from "react-hot-toast";
-
+export const dynamic = "force-dynamic";
 
 const AdminPage = () => {
 

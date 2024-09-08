@@ -2,45 +2,61 @@
 import useQnA from "@/hooks/useQna";
 import { TbHandClick } from "react-icons/tb";
 import React, { useState } from "react";
-export const dynamic="force-dynamic";
+
+export const dynamic = "force-dynamic";
+
 const EXPRESS = () => {
   const { allQnA, loading } = useQnA();
   const [expandedQuestionId, setExpandedQuestionId] = useState(null);
 
+  // Toggle the answer visibility
   const toggleAnswer = (id) => {
     setExpandedQuestionId(expandedQuestionId === id ? null : id);
   };
 
   return (
-    <div className=" flex flex-col gap-4 p-2 ">
+    <div className="flex flex-col gap-4 p-2">
       <div className="bg-white p-2 text-center md:w-[30%] mx-auto font-semibold flex flex-col items-center justify-center rounded-lg">
         <img
           src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"
-          alt="CSS3 Badge"
-           className="rounded-md w-20 h-7 md:w-36 md:h-11"
+          alt="Express.js Badge"
+          className="rounded-md w-20 h-7 md:w-36 md:h-11"
         />
-        <p className="flex items-center gap-2 text-sm md:text-base"><TbHandClick className="hidden md:flex"/>click on the question to see answer</p>
-        
+        <p className="flex items-center gap-2 text-sm md:text-base">
+          <TbHandClick className="hidden md:flex" />
+          Click on the question to see the answer
+        </p>
       </div>
       {loading ? (
         <p className="flex justify-center items-center text-[#ff7777]">
-           <span className="loading loading-ball loading-lg min-h-screen"></span>
+          <span className="loading loading-ball loading-lg min-h-screen"></span>
         </p>
+      ) : allQnA.length === 0 ? (
+        <p className="text-center text-gray-500">No questions available.</p>
       ) : (
         allQnA
           ?.filter((filteredQna) => filteredQna.qtype === "EXPRESSJS")
           .map((qna, index) => (
             <div key={qna._id} className="">
-                <div
+              <div
                 className="bg-white p-3 cursor-pointer rounded-md shadow-md"
                 onClick={() => toggleAnswer(qna._id)}
+                role="button"
+                aria-expanded={expandedQuestionId === qna._id}
+                aria-controls={`answer-${qna._id}`}
               >
                 <p className="text-violet-600 font-semibold text-sm md:text-base">
                   {index + 1}. {qna.question}
                 </p>
                 {expandedQuestionId === qna._id && (
-                  <div className="mt-2 text-sm md:text-base">{qna.answer} {qna.code &&(<p className="bg-gray-200 p-1 rounded-md text-blue-600">Example code: {qna.code}</p>)}</div>
-                 
+                  <div id={`answer-${qna._id}`} className="mt-2 text-sm md:text-base">
+                    {qna.answer}
+                    {qna.code && (
+                      <p className="bg-gray-200 p-1 rounded-md text-blue-600">
+                        Example code: {qna.code}
+                      </p>
+                    )}
+                  </div>
                 )}
               </div>
             </div>
