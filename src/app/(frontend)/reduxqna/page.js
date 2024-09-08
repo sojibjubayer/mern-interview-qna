@@ -1,6 +1,6 @@
 "use client";
 import useQnA from "@/hooks/useQna";
-import Image from "next/image";
+import { TbHandClick } from "react-icons/tb";
 import React, { useState } from "react";
 
 const REDUX = () => {
@@ -15,13 +15,13 @@ const REDUX = () => {
     <div className=" flex flex-col gap-4 p-2 ">
       <div className="bg-white p-2 text-center md:w-[30%] mx-auto font-semibold flex flex-col items-center justify-center rounded-lg">
         <img
-          src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
+          src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white"
           alt="HTML5 Badge"
           width={160} 
-          height={40} 
+          height={30} 
           className="rounded-md"
         />
-        <p>click on the question to see answer</p>
+        <p className="flex items-center gap-2 text-sm md:text-base"><TbHandClick className="hidden md:flex"/>click on the question to see answer</p>
       </div>
       {loading ? (
         <p className="flex justify-center  text-[#ff7777]">
@@ -36,11 +36,11 @@ const REDUX = () => {
                 className="bg-white p-3 cursor-pointer rounded-md shadow-md"
                 onClick={() => toggleAnswer(qna._id)}
               >
-                <p className="text-[#ff7777] font-semibold">
+                <p className="text-violet-600 font-semibold text-sm md:text-base">
                   {index + 1}. {qna.question}
                 </p>
                 {expandedQuestionId === qna._id && (
-                  <div className="mt-2">{qna.answer} {qna.code &&(<p className="bg-gray-200 p-1 rounded-md text-blue-600">Example code: {qna.code}</p>)}</div>
+                  <div className="mt-2 text-sm md:text-base">{qna.answer} {qna.code &&(<p className="bg-gray-200 p-1 rounded-md text-blue-600">Example code: {qna.code}</p>)}</div>
                  
                 )}
               </div>

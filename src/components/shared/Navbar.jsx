@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
+import { AiOutlineHome } from "react-icons/ai";
 
 const Navbar = () => {
     return (
-        <div className='bg-white shadow-md md:flex h-14 items-center justify-between font-semibold hidden'>
+       <div>
+         <div className='bg-white shadow-md md:flex h-14 items-center justify-between font-semibold hidden'>
             <div className='bg-[#FF7777] flex items-center h-full px-2'>
                 Interview QnA
             </div>
@@ -39,6 +41,8 @@ const Navbar = () => {
                 Login
             </div>
         </div>
+        <div className=' md:hidden font-semibold flex items-center justify-center bg-purple-600 text-white h-12 '><Link href="/" className='px-2 py-1 flex gap-5 items-center'><AiOutlineHome />Interview QnA</Link></div>
+       </div>
     );
 };
 

@@ -1,6 +1,6 @@
 "use client";
 import useQnA from "@/hooks/useQna";
-import Image from "next/image";
+import { TbHandClick } from "react-icons/tb";
 import React, { useState } from "react";
 
 const FIREBASE = () => {
@@ -15,13 +15,11 @@ const FIREBASE = () => {
     <div className=" flex flex-col gap-4 p-2 ">
       <div className="bg-white p-2 text-center md:w-[30%] mx-auto font-semibold flex flex-col items-center justify-center rounded-lg">
         <img
-          src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"
+          src="https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white"
           alt="CSS3 Badge"
-          width={160} 
-          height={40} 
-          className="rounded-md"
+           className="rounded-md w-20 h-7 md:w-36 md:h-11"
         />
-        <p>click on the question to see answer</p>
+        <p className="flex items-center gap-2 text-sm md:text-base"><TbHandClick className="hidden md:flex"/>click on the question to see answer</p>
         
       </div>
       {loading ? (

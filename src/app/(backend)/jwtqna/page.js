@@ -1,7 +1,8 @@
 "use client";
 import useQnA from "@/hooks/useQna";
-import Image from "next/image";
+
 import React, { useState } from "react";
+import { TbHandClick } from "react-icons/tb";
 
 const JWT = () => {
   const { allQnA, loading } = useQnA();
@@ -15,13 +16,11 @@ const JWT = () => {
     <div className=" flex flex-col gap-4 p-2 ">
       <div className="bg-white p-2 text-center md:w-[30%] mx-auto font-semibold flex flex-col items-center justify-center rounded-lg">
         <img
-          src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"
+          src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON-Web-Tokens&logoColor=white"
           alt="CSS3 Badge"
-          width={160} 
-          height={40} 
-          className="rounded-md"
+           className="rounded-md w-20 h-7 md:w-36 md:h-11"
         />
-        <p>click on the question to see answer</p>
+       <p className="flex items-center gap-2 text-sm md:text-base"><TbHandClick className="hidden md:flex"/>click on the question to see answer</p>
         
       </div>
       {loading ? (
@@ -33,15 +32,16 @@ const JWT = () => {
           ?.filter((filteredQna) => filteredQna.qtype === "JWT")
           .map((qna, index) => (
             <div key={qna._id} className="">
-              <div
+                <div
                 className="bg-white p-3 cursor-pointer rounded-md shadow-md"
                 onClick={() => toggleAnswer(qna._id)}
               >
-                <p className="text-[#ff7777] font-semibold">
+                <p className="text-violet-600 font-semibold text-sm md:text-base">
                   {index + 1}. {qna.question}
                 </p>
                 {expandedQuestionId === qna._id && (
-                  <p className="mt-2">{qna.answer}</p>
+                  <div className="mt-2 text-sm md:text-base">{qna.answer} {qna.code &&(<p className="bg-gray-200 p-1 rounded-md text-blue-600">Example code: {qna.code}</p>)}</div>
+                 
                 )}
               </div>
             </div>
