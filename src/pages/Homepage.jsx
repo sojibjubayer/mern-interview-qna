@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Homepage = () => {
   return (
-    <div className=" space-y-5 mt-5 w-[95%] mx-auto">
+    <div className=" space-y-5 mt-5 w-[95%] mx-auto min-h-screen">
       <div className="flex flex-col md:flex-row gap-5">
         <Link
           className="bg-white rounded-sm   shadow-md md:h-20 h-14 text-sm md:text-base flex items-center justify-center w-full  font-semibold"
