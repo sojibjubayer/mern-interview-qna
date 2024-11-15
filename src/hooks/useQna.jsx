@@ -9,6 +9,7 @@ const useQnA = () => {
     const fetchQnA = async () => {
         try {
             const data = await getQnA();
+            console.log(data)
             setAllQnA(data);
             setLoading(false);
         } catch (error) {
