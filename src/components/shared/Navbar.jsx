@@ -41,7 +41,7 @@ const Navbar = () => {
                 Login
             </div>
         </div>
-        <div className=' md:hidden font-semibold flex items-center justify-center bg-purple-600 text-white h-12 '><Link href="/" className='px-2 py-1 flex gap-5 items-center'><AiOutlineHome />Interview QnA</Link></div>
+        <div className=' md:hidden font-semibold flex items-center justify-center bg-purple-600 text-white h-12 '><Link href="/" className='px-2 py-1 flex gap-5 items-center'><AiOutlineHome />MERN Stack Interview QnA</Link></div>
        </div>
     );
 };
