@@ -7,7 +7,7 @@ const Homepage = () => {
       <div className="flex flex-col md:flex-row gap-5">
         <Link
           className="bg-white rounded-sm   shadow-md md:h-20 lg:h-24 h-14 text-sm md:text-base flex items-center justify-center w-full  font-semibold"
-          href="/html5qna"
+          href="./html5qna"
         >
           <span className="text-[#FF7777]">HTML5</span>&nbsp; Interview Question & Answers
         </Link>
