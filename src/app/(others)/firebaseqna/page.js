@@ -17,7 +17,7 @@ const FIREBASE = () => {
         <img
           src="https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white"
           alt="CSS3 Badge"
-           className="rounded-md w-20 h-7 md:w-36 md:h-11"
+           className="rounded-md w-32 h-7 md:w-36 md:h-11"
         />
         <p className="flex items-center gap-2 text-sm md:text-base"><TbHandClick className="hidden md:flex"/>click on the question to see answer</p>
         

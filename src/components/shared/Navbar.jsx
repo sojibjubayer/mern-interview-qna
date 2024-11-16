@@ -5,7 +5,7 @@ import { AiOutlineHome } from "react-icons/ai";
 const Navbar = () => {
     return (
        <div>
-         <div className='bg-white shadow-md md:flex h-14 items-center justify-between font-semibold hidden'>
+         <div className='bg-white shadow-md md:flex h-16 items-center justify-between font-semibold hidden'>
             <div className='bg-[#FF7777] flex items-center h-full px-2'>
                 Interview QnA
             </div>
@@ -34,7 +34,7 @@ const Navbar = () => {
                     </ul>
                 </li>
              
-                <li><Link href="/" className='px-2 py-1 hover:text-[#fe7070]'>Others</Link></li>
+                <li><Link href="/others" className='px-2 py-1 hover:text-[#fe7070]'>Others</Link></li>
                 <li><Link href="/admin" className='px-2 py-1 hidden hover:text-[#fe7070]'>Admin</Link></li>
             </ul>
             <div className='bg-[#FF7777] flex items-center h-full px-2'>
