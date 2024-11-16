@@ -7,7 +7,7 @@ const Navbar = () => {
        <div>
          <div className='bg-white shadow-md md:flex h-16 items-center justify-between font-semibold hidden'>
             <div className='bg-[#FF7777] flex items-center h-full px-2'>
-                Interview QnA
+                MERN Interview
             </div>
             <ul className='flex gap-10 relative'>
                 <li><Link href="/" className='px-2 py-1 hover:text-[#fe7070]'>Home</Link></li>
