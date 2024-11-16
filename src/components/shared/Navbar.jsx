@@ -35,7 +35,7 @@ const Navbar = () => {
                 </li>
              
                 <li><Link href="/" className='px-2 py-1 hover:text-[#fe7070]'>Others</Link></li>
-                <li><Link href="/admin" className='px-2 py-1 hover:text-[#fe7070]'>Admin</Link></li>
+                <li><Link href="/admin" className='px-2 py-1 hidden hover:text-[#fe7070]'>Admin</Link></li>
             </ul>
             <div className='bg-[#FF7777] flex items-center h-full px-2'>
                 Login
