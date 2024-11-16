@@ -20,7 +20,7 @@ const EXPRESS = () => {
         <img
           src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"
           alt="Express.js Badge"
-          className="rounded-md w-32 h-7 md:w-36 md:h-11"
+          className="rounded-md w-32 h-10 md:w-36 md:h-11"
         />
         <p className="flex items-center gap-2 text-sm md:text-base">
           <TbHandClick className="hidden md:flex" />
