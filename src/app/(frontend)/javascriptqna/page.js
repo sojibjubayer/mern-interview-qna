@@ -13,7 +13,7 @@ const JAVASCRIPT = () => {
 
   return (
     <div className=" flex flex-col gap-4 p-2 ">
-      {/* <div className="bg-white p-2 text-center md:w-[30%] mx-auto font-semibold flex flex-col items-center justify-center rounded-lg">
+      <div className="bg-white p-2 text-center md:w-[30%] mx-auto font-semibold flex flex-col items-center justify-center rounded-lg">
         <img
           src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"
           alt="JAVACRIPT Badge"
@@ -44,8 +44,8 @@ const JAVASCRIPT = () => {
               </div>
             </div>
           ))
-      )} */}
-      ok
+      )}
+      
     </div>
   );
 };
